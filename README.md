@@ -13,7 +13,17 @@ En cours de construction
 
 ## Challenge
 
-En cours de construction
+### Description des Jeux de données proposés 
+
+| Jeux de données                        | Description                                                                                   | Notebook Lié                                         |
+| ------------------------------------ | --------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| Collection Hal d'Espace-Dev et Tetis | Génère un fichier CSV contenant les métadonnées des articles scientifiques (API Hal).          | [construction_dataset_hal.ipynb](notebooks/hal_dataset.ipynb) |
+| Jeux de données TETIS                | Combine les jeux de données déposées dans Recherche.Data.Gouv et Dataverse.Cirad (API Dataverse). | [data_tetis.ipynb](notebooks/data_tetis.ipynb)        |
+| Jeux de données Espace-Dev           | Récupère les métadonnées de la collection Espace-Dev de DataSuds (API Dataverse).              | [data_espace-dev.ipynb](notebooks/data_espace-dev.ipynb) |
+| Jeux de données OpenIG               | Récupère les métadonnées des jeux de données via l'IDG d'OpenIG (API CKAN).                   | [data_openig.ipynb](notebooks/data_openig.ipynb)      |
+
+
+
 
 ---
 
