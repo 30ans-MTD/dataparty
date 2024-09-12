@@ -9,9 +9,11 @@ Dans le cadre des 30 ans de la MTD, les différents organismes de la [Maison de 
 
 ## Programme Séminaire 
 
-En cours de constructions
+En cours de construction
 
 ## Challenge
+
+En cours de construction
 
 ---
 
