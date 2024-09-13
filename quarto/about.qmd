@@ -1,0 +1,10 @@
+## Organisateurs
+
+ | Prénom   | Nom     | Institut      |
+|-----------|----------|---------------|
+| Rémy      | Decoupes | TETIS         |
+| Vincent   | Delbar   | Telescop      |
+| Laurent   | Demagistri| EspaceDev    |
+| Etienne   | Duperron | Nitidae       |
+| Nadia     | Guiffant | TETIS         |
+| Michaël   | Viadere  | OpenIG        |

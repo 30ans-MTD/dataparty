@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Party : Les 30 ans de la MTD",
+    "section": "",
+    "text": "logo_30ans\nDans le cadre des 30 ans de la MTD, les différents organismes de la Maison de la TéléDétection organise une journée dédiée à la Science Ouverte. Cette année, le sujet principal sera la visualisation de données à travers deux activités :"
+  },
+  {
+    "objectID": "index.html#programme-séminaire",
+    "href": "index.html#programme-séminaire",
+    "title": "Data Party : Les 30 ans de la MTD",
+    "section": "Programme Séminaire",
+    "text": "Programme Séminaire\nEn cours de construction"
+  },
+  {
+    "objectID": "index.html#challenge",
+    "href": "index.html#challenge",
+    "title": "Data Party : Les 30 ans de la MTD",
+    "section": "Challenge",
+    "text": "Challenge\n\nDescription des Jeux de données proposés\n\n\n\nJeux de données\nDescription\nNotebook Lié\nInformation Géographique\n\n\n\n\nCollection Hal d’Espace-Dev et Tetis\nGénère un fichier CSV contenant les métadonnées des articles scientifiques (API Hal).\nconstruction_dataset_hal.ipynb\nLes pays des adresses d’affiliation des co-auteurs\n\n\nJeux de données TETIS\nCombine les jeux de données déposées dans Recherche.Data.Gouv et Dataverse.Cirad (API Dataverse).\ndata_tetis.ipynb\nTerrain d’étude quand cela est renseigné\n\n\nJeux de données Espace-Dev\nRécupère les métadonnées de la collection Espace-Dev de DataSuds (API Dataverse).\ndata_espace-dev.ipynb\nTerrain d’étude quand cela est renseigné\n\n\nJeux de données OpenIG\nRécupère les métadonnées des jeux de données via l’IDG d’OpenIG (API CKAN).\ndata_openig.md\n-"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Data Party : Les 30 ans de la MTD",
+    "section": "",
+    "text": "Prénom\nNom\nInstitut\n\n\n\n\nRémy\nDecoupes\nTETIS\n\n\nVincent\nDelbar\nTelescop\n\n\nLaurent\nDemagistri\nEspaceDev\n\n\nEtienne\nDuperron\nNitidae\n\n\nNadia\nGuiffant\nTETIS\n\n\nMichaël\nViadere\nOpenIG"
+  },
+  {
+    "objectID": "about.html#organisateurs",
+    "href": "about.html#organisateurs",
+    "title": "Data Party : Les 30 ans de la MTD",
+    "section": "",
+    "text": "Prénom\nNom\nInstitut\n\n\n\n\nRémy\nDecoupes\nTETIS\n\n\nVincent\nDelbar\nTelescop\n\n\nLaurent\nDemagistri\nEspaceDev\n\n\nEtienne\nDuperron\nNitidae\n\n\nNadia\nGuiffant\nTETIS\n\n\nMichaël\nViadere\nOpenIG"
+  }
+]
