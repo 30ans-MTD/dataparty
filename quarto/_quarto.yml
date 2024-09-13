@@ -7,6 +7,7 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - idees_dataviz.qmd
       - about.qmd
 
 format:

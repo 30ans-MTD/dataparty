@@ -11,9 +11,20 @@ Dans le cadre des 30 ans de la MTD, les différents organismes de la [Maison de 
 
 En cours de construction
 
-## Challenge
+## Challenge : La plus belle data viz !
+Les équipes seront constituées le jour même par les organisateurs afin de :
 
-### Description des Jeux de données proposés 
+- Mélanger les participants entre organismes (i.e. les équipes devrons avoir plusieurs tutelles)
+- Avec un socle commun de compétences (Programmation, cartographie, web, géographie)
+
+L'**objectif** est de proposer des visualisations, particulièrement jolies, qui arrivent à faire passer un message.
+Pour ce faire, nous mettons à disposition plusieurs notebooks pour construire des jeux de données autour des articles et données publiées par les structures de la MTD
+
+À la fin de la journée, nous récolterons les différentes visualisations des équipes. Le Lendemain, nous ferons passer un sondage pour choisir l'équipe gagnante.
+
+**Prix** : L'équipe gagnante sera invitée dans un restaurant à Montpellier !
+
+**Description des Jeux de données proposés** : 
 
 | Jeux de données                        | Description                                                                                   | Notebook Lié                                         | Information Géographique                            |
 | ------------------------------------ | --------------------------------------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------- |

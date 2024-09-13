@@ -33,5 +33,12 @@
     "title": "Data Party : Les 30 ans de la MTD",
     "section": "",
     "text": "Prénom\nNom\nInstitut\n\n\n\n\nRémy\nDecoupes\nTETIS\n\n\nVincent\nDelbar\nTelescop\n\n\nLaurent\nDemagistri\nEspaceDev\n\n\nEtienne\nDuperron\nNitidae\n\n\nNadia\nGuiffant\nTETIS\n\n\nMichaël\nViadere\nOpenIG"
+  },
+  {
+    "objectID": "idees_dataviz.html",
+    "href": "idees_dataviz.html",
+    "title": "Idées de visualisation",
+    "section": "",
+    "text": "d3 = require(\"d3@7\", \"d3-geo-projection@4\")\nbertin = require('bertin@0.9.16')\n\ngdf = JSON.parse(gdf_str)\nworld = JSON.parse(world_str)\n\nbertin.draw({\n  params: {projection: d3.geoBertin1953() },\n  layers: [\n    {\n      type: \"header\",\n      text: \"Carte des collaborations\",\n      background: \"#3B556D\",\n      fill: \"white\",\n      fontSize: 40,\n      anchor: \"middle\"\n    },\n    {\n      type: \"bubble\",\n      geojson: gdf,\n      k: 20,\n      leg_round: 0,\n      values: \"Number of Papers\",\n      leg_x: 100,\n      leg_y: 300,\n      leg_divisor: 1,\n      leg_title: `Nombre \nde papier en collaboration`,\n      tooltip: {\n        //col: \"red\",\n        fields: [\"$Country\", \"\", \"Number of Papers\", \"$Number of Papers\", \"Theme\", \"$Theme\"],\n        fontSize: [25, 10, 14, 12, 14, 12],\n        fontWeight: [\"bold\", \"normal\", \"bold\", \"normal\", \"bold\", \"normal\"]\n      },\n      fill: {\n        type: \"typo\",\n        values: \"Theme\",\n        leg_title: `Thématique`,\n        leg_x: 100,\n        leg_y: 100\n      }\n      },\n      {\n        type: \"layer\",\n        geojson: world,\n        fill: \"white\",\n        fillOpacity: 0.3,\n        stroke: \"none\"\n      },\n      {type: \"graticule\"},\n      {type: \"outline\"},\n  ],\n})"
   }
 ]

@@ -1,0 +1,219 @@
+---
+title: "Idées de visualisation"
+---
+
+```{python}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+import pandas as pd
+import requests
+import ast
+
+import os, sys 
+# print(sys.prefix)
+```
+
+```{python}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+hal_tetis = pd.read_csv("./../data/hal_export_TETIS.csv")
+hal_tetis["labo"] = "TETIS"
+hal_espace_dev = pd.read_csv("./../data/hal_export_ESPACE-DEV.csv")
+hal_espace_dev["labo"] = "ESPACE-DEV"
+
+hal = pd.concat([hal_tetis, hal_espace_dev])
+hal.reset_index(drop=True, inplace=True)
+hal = hal.rename(columns={"domainAllCode_s": "thematique", "title_s": "titre", "authFullName_s": "auteurs", "producedDate_s": "date", })
+
+country_columns = hal.filter(like='country_')
+hal['unique_countries'] = country_columns.apply(lambda row: list({country for country in row if pd.notna(country)}), axis=1)
+
+hal = hal[["titre", "auteurs", "date", "thematique", "unique_countries"]]
+
+
+#thematique
+hal['thematique'] = hal['thematique'].apply(lambda x: ast.literal_eval(x) if pd.notna(x) else [])
+domain_mapping = {
+    'sdv': 'Life Sciences',
+    'shs': 'SHS',
+    'math': 'Math',
+    'info': 'Computer Sci.',
+    'chim': "Chemistry",
+    'stat': "Stats",
+    'phys': "Physic",
+    'qfin': "Economy",
+    'scco': "Cognitive Sci.",
+    'sde': "Environmental Sci.",
+    "sdu": "Astronomy",
+    "spi": "Engineering Sci."
+
+}
+
+# Function to extract upper-level domain and replace with full name
+def extract_upper_level_domain(domain_list):
+    if domain_list and isinstance(domain_list, list):  # Check if the value is a non-empty list
+        try:
+            upper_level_domain = domain_list[0].split('.')[0]
+        except:
+            upper_level_domain = domain_list[0]
+        return domain_mapping.get(upper_level_domain, upper_level_domain)
+    return None
+
+# Apply the function to create a new column 'main_thematique'
+hal['main_thematique'] = hal['thematique'].apply(extract_upper_level_domain)
+
+# hal.describe()
+```
+
+```{python}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+df_exploded = hal.explode('unique_countries')
+df_exploded = df_exploded.rename(columns={'unique_countries': 'Country', 'main_thematique': 'Theme'})
+df_count = df_exploded.groupby(['Country', 'Theme']).size().reset_index(name='Number of Papers')
+
+```
+
+```{python}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+
+
+# df_result = df_count.iloc[0:10]
+df_result = df_count
+
+import geopandas as gpd
+from geopy.geocoders import Nominatim
+from geopy.extra.rate_limiter import RateLimiter
+from shapely.geometry import Point
+
+geolocator = Nominatim(user_agent="geoapiExercises")
+geocode = RateLimiter(geolocator.geocode, min_delay_seconds=1)
+
+# Function to get coordinates for a country
+def get_coordinates(country):
+    try:
+        location = geocode(country)
+        return (location.latitude, location.longitude) if location else (None, None)
+    except Exception as e:
+        print(f"Error retrieving coordinates for {country}: {e}")
+        return (None, None)
+
+df_result['Coordinates'] = df_result['Country'].apply(get_coordinates)
+df_result[['Latitude', 'Longitude']] = pd.DataFrame(df_result['Coordinates'].tolist(), index=df_result.index)
+df_result = df_result.drop(columns=['Coordinates'])
+geometry = [Point(xy) for xy in zip(df_result['Longitude'], df_result['Latitude'])]
+gdf = gpd.GeoDataFrame(df_result, geometry=geometry)
+
+gdf.to_csv("./../data/carte_collaboration.csv")
+
+ojs_define(gdf_str = gdf.to_json())
+
+```
+
+```{python}
+#| echo: false
+#| eval: false
+#| warning: false
+#| message: false
+
+import geopandas as gpd
+df= gpd.read_file("./../data/carte_collaboration.csv")
+
+ojs_define(gdf_str = gdf.to_json())
+
+```
+
+```{python}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+
+world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+world = world[(world.pop_est>0) & (world.name!="Antarctica")]
+world['gdp_per_cap'] = round((world.gdp_md_est * 1e6) / world.pop_est, 2)
+
+ojs_define(world_str = world.to_json())
+
+```
+
+```{ojs}
+//| echo: false
+
+d3 = require("d3@7", "d3-geo-projection@4")
+bertin = require('bertin@0.9.16')
+
+gdf = JSON.parse(gdf_str)
+world = JSON.parse(world_str)
+
+bertin.draw({
+  params: {projection: d3.geoBertin1953() },
+  layers: [
+    {
+      type: "header",
+      text: "Carte des collaborations",
+      background: "#3B556D",
+      fill: "white",
+      fontSize: 40,
+      anchor: "middle"
+    },
+    {
+      type: "bubble",
+      geojson: gdf,
+      k: 20,
+      leg_round: 0,
+      values: "Number of Papers",
+      leg_x: 100,
+      leg_y: 300,
+      leg_divisor: 1,
+      leg_title: `Nombre 
+de papier en collaboration`,
+      tooltip: {
+        //col: "red",
+        fields: ["$Country", "", "Number of Papers", "$Number of Papers", "Theme", "$Theme"],
+        fontSize: [25, 10, 14, 12, 14, 12],
+        fontWeight: ["bold", "normal", "bold", "normal", "bold", "normal"]
+      },
+      fill: {
+        type: "typo",
+        values: "Theme",
+        leg_title: `Thématique`,
+        leg_x: 100,
+        leg_y: 100
+      }
+      },
+      {
+        type: "layer",
+        geojson: world,
+        fill: "white",
+        fillOpacity: 0.3,
+        stroke: "none"
+      },
+      {type: "graticule"},
+      {type: "outline"},
+  ],
+})
+
+```
+
+Cette carte propose d'afficher deux variables :
+
+- Une typologique : la thématique des articles scientifiques
+- Une grandeur : le nombre d'articles co-publiés entre Espace-Dev ou TETIS et un co-auteur du pays concerné.
+
+Pour ce faire, nous avons utilisé les données de Hal que nous avons du remanier 
+
+1. Concatener les articles d'Espace-Dev et hal_tetis
+2. Rassembler tous les pays dispatchés dans plusieurs colonnes dans une seule qui contient la liste des pays 
+3. Retravailler les noms des colonnes
+4. Nous avons inversé le format du dataframe avec l'option `group_by`, afin d'obtenir pour chaque couple de Pays & Thématique, le nombre d'articles
+5. Enfin, nous visualisons les données sur une carte interactive produite par la librairie Bertin.js
