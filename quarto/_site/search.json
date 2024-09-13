@@ -5,5 +5,26 @@
     "title": "Idées de visualisation",
     "section": "",
     "text": "d3 = require(\"d3@7\", \"d3-geo-projection@4\")\nbertin = require('bertin@0.9.16')\n\ngdf = JSON.parse(gdf_str)\nworld = JSON.parse(world_str)\n\nbertin.draw({\n  params: {projection: d3.geoBertin1953() },\n  layers: [\n    {\n      type: \"header\",\n      text: \"Carte des collaborations\",\n      background: \"#3B556D\",\n      fill: \"white\",\n      fontSize: 40,\n      anchor: \"middle\"\n    },\n    {\n      type: \"bubble\",\n      geojson: gdf,\n      k: 100, // rayon du plus grand cercle\n      values: \"Number of Papers\",\n      leg_round: 0,\n      leg_x: 700,\n      leg_y: 300,\n      leg_divisor: 5,\n      leg_title: `Nombre \nde papier en collaboration`,\n      tooltip: {\n        //col: \"red\",\n        fields: [\"$Country\", \"\", \"Number of Papers\", \"$Number of Papers\", \"Theme\", \"$Theme\"],\n        fontSize: [25, 10, 14, 12, 14, 12],\n        fontWeight: [\"bold\", \"normal\", \"bold\", \"normal\", \"bold\", \"normal\"]\n      },\n      fill: {\n        type: \"typo\",\n        values: \"Theme\",\n        leg_title: `Thématique`,\n        leg_x: 100,\n        leg_y: 100\n      }\n      },\n      {\n        type: \"layer\",\n        geojson: world,\n        fill: \"white\",\n        fillOpacity: 0.3,\n        stroke: \"none\"\n      },\n      {type: \"graticule\"},\n      {type: \"outline\"},\n  ],\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCette carte propose d’afficher deux variables :\n\nUne typologique : la thématique des articles scientifiques\nUne grandeur : le nombre d’articles co-publiés entre Espace-Dev ou TETIS et un co-auteur du pays concerné.\n\nPour ce faire, nous avons utilisé les données de Hal que nous avons du remanier\n\nConcatener les articles d’Espace-Dev et hal_tetis\nRassembler tous les pays dispatchés dans plusieurs colonnes dans une seule qui contient la liste des pays\nRetravailler les noms des colonnes\nNous avons inversé le format du dataframe avec l’option group_by, afin d’obtenir pour chaque couple de Pays & Thématique, le nombre d’articles\nEnfin, nous visualisons les données sur une carte interactive produite par la librairie Bertin.js"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Party : Les 30 ans de la MTD",
+    "section": "",
+    "text": "logo_30ans\nDans le cadre des 30 ans de la MTD, les différents organismes de la Maison de la TéléDétection organise une journée dédiée à la Science Ouverte. Cette année, le sujet principal sera la visualisation de données à travers deux activités :"
+  },
+  {
+    "objectID": "index.html#programme-séminaire",
+    "href": "index.html#programme-séminaire",
+    "title": "Data Party : Les 30 ans de la MTD",
+    "section": "Programme Séminaire",
+    "text": "Programme Séminaire\nEn cours de construction"
+  },
+  {
+    "objectID": "index.html#challenge",
+    "href": "index.html#challenge",
+    "title": "Data Party : Les 30 ans de la MTD",
+    "section": "Challenge",
+    "text": "Challenge\nLes équipes seront constituées le jour même par les organisateurs afin de :\n\nMélanger les participants entre organismes (i.e. les équipes devrons avoir plusieurs tutelles)\nAvec un socle commun de compétences (Programmation, cartographie, web, géographie)\n\nL’objectif est de proposer des visualisations, particulièrement jolies, qui arrivent à faire passer un message. Pour ce faire, nous mettons à disposition plusieurs notebooks pour construire des jeux de données autour des articles et données publiées par les structures de la MTD\nÀ la fin de la journée, nous récolterons les différentes visualisations des équipes. Le Lendemain, nous ferons passer un sondage pour choisir l’équipe gagnante.\nPrix : L’équipe gagnante sera invitée dans un restaurant à Montpellier !\nDescription des Jeux de données proposés\n\n\n\nJeux de données\nDescription\nNotebook Lié\nInformation Géographique\n\n\n\n\nCollection Hal d’Espace-Dev et Tetis\nGénère un fichier CSV contenant les métadonnées des articles scientifiques (API Hal).\nconstruction_dataset_hal.ipynb\nLes pays des adresses d’affiliation des co-auteurs\n\n\nJeux de données TETIS\nCombine les jeux de données déposées dans Recherche.Data.Gouv et Dataverse.Cirad (API Dataverse).\ndata_tetis.ipynb\nTerrain d’étude quand cela est renseigné\n\n\nJeux de données Espace-Dev\nRécupère les métadonnées de la collection Espace-Dev de DataSuds (API Dataverse).\ndata_espace-dev.ipynb\nTerrain d’étude quand cela est renseigné\n\n\nJeux de données OpenIG\nRécupère les métadonnées des jeux de données via l’IDG d’OpenIG (API CKAN).\ndata_openig.md\n-"
   }
 ]
