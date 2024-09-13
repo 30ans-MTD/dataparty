@@ -87,8 +87,8 @@ df_count = df_exploded.groupby(['Country', 'Theme']).size().reset_index(name='Nu
 #| message: false
 
 
-# df_result = df_count.iloc[0:10]
-df_result = df_count
+df_result = df_count.iloc[0:10]
+# df_result = df_count
 
 import geopandas as gpd
 from geopy.geocoders import Nominatim
@@ -126,6 +126,9 @@ ojs_define(gdf_str = gdf.to_json())
 #| warning: false
 #| message: false
 
+df_count = df_count.drop_duplicates()
+# df_count=df_count.iloc[0:100]
+
 import geopandas as gpd
 from shapely.geometry import Point
 
@@ -134,8 +137,16 @@ centroids_df = centroids_df[centroids_df["capital"] == "primary"]
 centroids_df["Country"] = centroids_df["country"]
 
 df_count = pd.merge(df_count, centroids_df, on='Country', how='left')
+df_count = df_count[["Country", "Theme", "Number of Papers", "lng", "lat"]]
 geometry = [Point(xy) for xy in zip(df_count['lng'], df_count['lat'])]
 gdf = gpd.GeoDataFrame(df_count, geometry=geometry)
+
+def is_not_empty(geom):
+    return not geom.is_empty
+gdf = gdf[gdf['geometry'].apply(is_not_empty)]
+gdf = gdf.drop_duplicates(subset=['Country', 'Theme'])
+
+gdf = gdf[gdf['Country'].str.lower() != 'france']
 
 gdf.to_csv("./../data/carte_collaboration_simplemaps.csv")
 
@@ -180,12 +191,12 @@ bertin.draw({
     {
       type: "bubble",
       geojson: gdf,
-      k: 20,
-      leg_round: 0,
+      k: 100, // rayon du plus grand cercle
       values: "Number of Papers",
-      leg_x: 100,
+      leg_round: 0,
+      leg_x: 700,
       leg_y: 300,
-      leg_divisor: 1,
+      leg_divisor: 5,
       leg_title: `Nombre 
 de papier en collaboration`,
       tooltip: {
