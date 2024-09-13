@@ -82,7 +82,7 @@ df_count = df_exploded.groupby(['Country', 'Theme']).size().reset_index(name='Nu
 
 ```{python}
 #| echo: false
-#| eval: true
+#| eval: false
 #| warning: false
 #| message: false
 
@@ -119,18 +119,29 @@ ojs_define(gdf_str = gdf.to_json())
 
 ```
 
+
 ```{python}
 #| echo: false
-#| eval: false
+#| eval: true
 #| warning: false
 #| message: false
 
 import geopandas as gpd
-df= gpd.read_file("./../data/carte_collaboration.csv")
+from shapely.geometry import Point
+
+centroids_df = pd.read_csv("./../data/worldcities.csv")
+centroids_df = centroids_df[centroids_df["capital"] == "primary"]
+centroids_df["Country"] = centroids_df["country"]
+
+df_count = pd.merge(df_count, centroids_df, on='Country', how='left')
+geometry = [Point(xy) for xy in zip(df_count['lng'], df_count['lat'])]
+gdf = gpd.GeoDataFrame(df_count, geometry=geometry)
+
+gdf.to_csv("./../data/carte_collaboration_simplemaps.csv")
 
 ojs_define(gdf_str = gdf.to_json())
-
 ```
+
 
 ```{python}
 #| echo: false
