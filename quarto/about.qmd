@@ -2,9 +2,10 @@
 
  | Prénom   | Nom     | Institut      |
 |-----------|----------|---------------|
-| Rémy      | Decoupes | TETIS         |
-| Vincent   | Delbar   | Telescop      |
-| Laurent   | Demagistri| EspaceDev    |
-| Etienne   | Duperron | Nitidae       |
-| Nadia     | Guiffant | TETIS         |
-| Michaël   | Viadere  | OpenIG        |
+| [Rémy](http://remy.decoupes.pages.mia.inra.fr/website/)      | Decoupes | TETIS         |
+| [Vincent](https://cv.hal.science/vincent-delbar)   | Delbar   | Telescop      |
+| [Laurent](https://cv.hal.science/laurent-demagistri)   | Demagistri| EspaceDev    |
+| [Etienne](https://fr.linkedin.com/in/etienne-duperron)   | Duperron | Nitidae       |
+| [Nadia](https://fr.linkedin.com/in/nadia-guiffant-0987a4159)     | Guiffant | TETIS         |
+| [Michaël](https://fr.linkedin.com/in/micha%C3%ABl-viadere-664982220)   | Viadere  | OpenIG        |
+

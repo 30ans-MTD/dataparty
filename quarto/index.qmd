@@ -19,10 +19,10 @@ En Salle Asie et Afrique, Batiment Adret, Maison de la TéléDétection.
 
 | Time           | Speaker               | Topic                                        |
 | -------------- | --------------------- | -------------------------------------------- |
-| 09h45 - 10h00  | Organisateurs          | Introduction                                 |
-| 10h00 - 11h00  | Nicolas Lambert        | Cartes Web interactives                      |
-| 11h00 - 11h30  | Marie Gradeler         | Comment choisir sa visualisation des données?|
-| 11h30 - 12h00  | Christophe Revillion   | Portails Rshiny                              |
+| 09h45 - 10h00  | [Organisateurs](https://30ans-mtd.github.io/dataparty/about.html)          | Introduction                                 |
+| 10h00 - 11h00  | [Nicolas Lambert](https://neocarto.hypotheses.org/nicolas-lambert)        | Cartes Web interactives                      |
+| 11h00 - 11h30  | [Marie Gradeler](https://fr.linkedin.com/in/marie-gradeler)         | Comment choisir la visualisation de données la plus adaptée ?|
+| 11h30 - 12h00  | [Christophe Revillion](https://www.researchgate.net/profile/Christophe-Revillion)   | Portails Rshiny                              |
 
 
 
