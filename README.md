@@ -10,6 +10,8 @@ Dans le cadre des 30 ans de la MTD, les différents organismes de la [Maison de 
 **Lieu du séminaire :**
 En Salle Asie et Afrique, Batiment Adret, Maison de la TéléDétection.
 
+En distanciel via [Zoom INRAE](https://inrae-fr.zoom.us/j/3650238425?pwd=dEorRHlQNTF2b1Bzb1NsVHdqUmZGdz09&omn=96030529291).
+
 
 ## Programme Séminaire 
 
