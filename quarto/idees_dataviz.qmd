@@ -1,5 +1,5 @@
 ---
-title: "Idées de visualisation"
+title: "Exemple de visualisation"
 ---
 
 ```{python}
