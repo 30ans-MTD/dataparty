@@ -9,6 +9,8 @@ Dans le cadre des 30 ans de la MTD, les différents organismes de la [Maison de 
 - Séminaire de 09h45 à 12h30
 - Un challenge de 09h à 18h
 
+**Date**: Le jeudi 03 Octobre 2024
+
 **Lieu du séminaire :**
 En Salle Asie et Afrique, Batiment Adret, Maison de la TéléDétection.
 
@@ -21,7 +23,8 @@ En distanciel via [Zoom INRAE](https://inrae-fr.zoom.us/j/3650238425?pwd=dEorRHl
 
 | Time           | Speaker               | Topic                                        |
 | -------------- | --------------------- | -------------------------------------------- |
-| 09h45 - 10h00  | [Organisateurs](https://30ans-mtd.github.io/dataparty/about.html)          | Introduction                                 |
+| 09h00 - 09h15  | [Organisateurs](https://30ans-mtd.github.io/dataparty/about.html)          | Lancement du **Challenge**                                 |                              |
+| 09h50 - 10h00  | [Organisateurs](https://30ans-mtd.github.io/dataparty/about.html)          | Lancement du Séminaire **visualisation de données**                                |
 | 10h00 - 11h00  | [Nicolas Lambert](https://neocarto.hypotheses.org/nicolas-lambert)        | Construire des cartes réactives pour le Web avec Observable JavaScript                      |
 | 11h00 - 11h30  | [Marie Gradeler](https://fr.linkedin.com/in/marie-gradeler)         | Comment choisir la visualisation de données la plus adaptée ?|
 | 11h30 - 12h00  | [Christophe Revillion](https://www.researchgate.net/profile/Christophe-Revillion)   | Portails Rshiny                              |
