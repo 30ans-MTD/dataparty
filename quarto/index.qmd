@@ -19,7 +19,6 @@ En distanciel via [Zoom INRAE](https://inrae-fr.zoom.us/j/3650238425?pwd=dEorRHl
 
 ## Programme Séminaire 
 
-/!\\ En cours de construction /!\\
 
 | Time           | Speaker               | Topic                                        |
 | -------------- | --------------------- | -------------------------------------------- |
@@ -27,7 +26,7 @@ En distanciel via [Zoom INRAE](https://inrae-fr.zoom.us/j/3650238425?pwd=dEorRHl
 | 09h50 - 10h00  | [Organisateurs](https://30ans-mtd.github.io/dataparty/about.html)          | Lancement du Séminaire **visualisation de données**                                |
 | 10h00 - 11h00  | [Nicolas Lambert](https://neocarto.hypotheses.org/nicolas-lambert)        | Construire des cartes réactives pour le Web avec Observable JavaScript                      |
 | 11h00 - 11h30  | [Marie Gradeler](https://fr.linkedin.com/in/marie-gradeler)         | Comment choisir la visualisation de données la plus adaptée ?|
-| 11h30 - 12h00  | [Christophe Revillion](https://www.researchgate.net/profile/Christophe-Revillion)   | Portails Rshiny                              |
+| 11h30 - 12h00  | [Christophe Revillion](https://www.researchgate.net/profile/Christophe-Revillion)   | Présentation de deux applications Rshiny, les projets SCO Leptoyangoon et Cimopolée                              |
 
 
 
