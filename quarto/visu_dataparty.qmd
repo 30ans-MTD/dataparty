@@ -1,0 +1,10 @@
+---
+title: "Visualisation faite pendant la data party"
+---
+
+Rendez-vous sur le notebook observable utilisé pendant la dataparty : [[lien observable](https://observablehq.com/d/80dba99b6034c4ce)]
+
+```{=html}
+<iframe width="100%" height="500" frameborder="0"
+  src="https://observablehq.com/d/80dba99b6034c4ce" title="observablehq"></iframe>
+```

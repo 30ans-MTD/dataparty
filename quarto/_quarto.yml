@@ -8,6 +8,8 @@ website:
       - href: index.qmd
         text: Home
       - idees_dataviz.qmd
+      - href: visu_dataparty.qmd
+        text: Visu faite pendant la data party
       - about.qmd
 
 format:
