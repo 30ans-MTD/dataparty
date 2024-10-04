@@ -17,15 +17,13 @@ En distanciel via [Zoom INRAE](https://inrae-fr.zoom.us/j/3650238425?pwd=dEorRHl
 
 ## Programme Séminaire 
 
-/!\ En cours de construction /!\
-
-| Time           | Speaker               | Topic                                        |
-| -------------- | --------------------- | -------------------------------------------- |
-| 09h00 - 09h15  | [Organisateurs](https://30ans-mtd.github.io/dataparty/about.html)          | Lancement du **Challenge**                                 |                              |
-| 09h50 - 10h00  | [Organisateurs](https://30ans-mtd.github.io/dataparty/about.html)          | Lancement du Séminaire **visualisation de données**                                |
-| 10h00 - 11h00  | [Nicolas Lambert](https://neocarto.hypotheses.org/nicolas-lambert)        | Construire des cartes réactives pour le Web avec Observable JavaScript                      |
-| 11h00 - 11h30  | [Marie Gradeler](https://fr.linkedin.com/in/marie-gradeler)         | Comment choisir la visualisation de données la plus adaptée ?|
-| 11h30 - 12h00  | [Christophe Revillion](https://www.researchgate.net/profile/Christophe-Revillion)   | Portails Rshiny                              |
+| Time           | Speaker               | Topic                                        | Presentation link |
+| -------------- | --------------------- | -------------------------------------------- | ----- |
+| 09h00 - 09h15  | [Organisateurs](https://30ans-mtd.github.io/dataparty/about.html)          | Lancement du **Challenge**                                 |                              | [[PDF](https://github.com/30ans-MTD/dataparty/raw/main/presentations/2024-10-03_Dataparty_30ans-challenge.pdf)] |
+| 09h50 - 10h00  | [Organisateurs](https://30ans-mtd.github.io/dataparty/about.html)          | Lancement du Séminaire **visualisation de données**                                | [[PDF](https://github.com/30ans-MTD/dataparty/raw/main/presentations/2024-10-03_Dataparty_30ans-webinaire.pdf)] |
+| 10h00 - 11h00  | [Nicolas Lambert](https://neocarto.hypotheses.org/nicolas-lambert)        | Construire des cartes réactives pour le Web avec Observable JavaScript                      | [[Notebook Observable](https://observablehq.com/@neocartocnrs/mtd) |]
+| 11h00 - 11h30  | [Marie Gradeler](https://fr.linkedin.com/in/marie-gradeler)         | Comment choisir la visualisation de données la plus adaptée ?| [[PDF](https://github.com/30ans-MTD/dataparty/raw/main/presentations/Comment%20choisir%20la%20visualisation%20de%20donn%C3%A9es%20la%20plus%20adapt%C3%A9e.pdf)]
+| 11h30 - 12h00  | [Christophe Revillion](https://www.researchgate.net/profile/Christophe-Revillion)   | Présentation de deux applications Rshiny, les projets SCO Leptoyangoon et Cimopolée                              | [[PDF](https://nextcloud.inrae.fr/s/jKXxi7yxyTAQX2J)] |
 
 
 
