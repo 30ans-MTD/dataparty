@@ -18,7 +18,7 @@
     "href": "index.html#programme-séminaire",
     "title": "Data Party : Les 30 ans de la MTD",
     "section": "Programme Séminaire",
-    "text": "Programme Séminaire\n\n\n\nTime\nSpeaker\nTopic\nPresentation link\n\n\n\n\n09h00 - 09h15\nOrganisateurs\nLancement du Challenge\n[PDF]\n\n\n09h50 - 10h00\nOrganisateurs\nLancement du Séminaire visualisation de données\n[PDF]\n\n\n10h00 - 11h00\nNicolas Lambert\nConstruire des cartes réactives pour le Web avec Observable JavaScript\n[Notebook Observable]\n\n\n11h00 - 11h30\nMarie Gradeler\nComment choisir la visualisation de données la plus adaptée ?\n[PDF]\n\n\n11h30 - 12h00\nChristophe Revillion\nPrésentation de deux applications Rshiny, les projets SCO Leptoyangoon et Cimopolée\n[PDF]\n\n\n\nLiens intéressants partagés pendant le séminaire:\n\nhttps://r-graph-gallery.com/\nhttps://www.data-to-viz.com/\nhttps://datavizproject.com/\nhttps://datavizcatalogue.com/\nhttps://framagit.org/espace-dev/geohealth/climhealth\nhttps://framagit.org/espace-dev/cimopolee"
+    "text": "Programme Séminaire\n\n\n\nTime\nSpeaker\nTopic\nPresentation link\n\n\n\n\n09h00 - 09h15\nOrganisateurs\nLancement du Challenge\n[PDF]\n\n\n09h50 - 10h00\nOrganisateurs\nLancement du Séminaire visualisation de données\n[PDF]\n\n\n10h00 - 11h00\nNicolas Lambert\nConstruire des cartes réactives pour le Web avec Observable JavaScript\n[Notebook Observable]\n\n\n11h00 - 11h30\nMarie Gradeler\nComment choisir la visualisation de données la plus adaptée ?\n[PDF]\n\n\n11h30 - 12h00\nChristophe Revillion\nPrésentation de deux applications Rshiny, les projets SCO Leptoyangoon et Cimopolée\n[PDF]\n\n\n\nLiens intéressant partagés pendant le séminaire:\n\nhttps://r-graph-gallery.com/\nhttps://www.data-to-viz.com/\nhttps://datavizproject.com/\nhttps://datavizcatalogue.com/\nhttps://framagit.org/espace-dev/geohealth/climhealth\nhttps://framagit.org/espace-dev/cimopolee"
   },
   {
     "objectID": "index.html#challenge",
@@ -46,6 +46,6 @@
     "href": "visu_dataparty.html",
     "title": "Visualisation faite pendant la data party",
     "section": "",
-    "text": "Rendez-vous sur le notebook observable utilisé pendant la dataparty : [lien observable]"
+    "text": "Pour plus d’interactivité avec la visualisation: rendez-vous sur le notebook observable utilisé pendant la dataparty : [lien observable]\nVoici une capture d’écran centrée sur l’année 2016"
   }
 ]

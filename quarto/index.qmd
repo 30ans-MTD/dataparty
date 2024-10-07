@@ -28,7 +28,7 @@ En distanciel via [Zoom INRAE](https://inrae-fr.zoom.us/j/3650238425?pwd=dEorRHl
 | 11h00 - 11h30  | [Marie Gradeler](https://fr.linkedin.com/in/marie-gradeler)         | Comment choisir la visualisation de données la plus adaptée ?| [[PDF](https://github.com/30ans-MTD/dataparty/raw/main/presentations/Comment%20choisir%20la%20visualisation%20de%20donn%C3%A9es%20la%20plus%20adapt%C3%A9e.pdf)]
 | 11h30 - 12h00  | [Christophe Revillion](https://www.researchgate.net/profile/Christophe-Revillion)   | Présentation de deux applications Rshiny, les projets SCO Leptoyangoon et Cimopolée                              | [[PDF](https://nextcloud.inrae.fr/s/jKXxi7yxyTAQX2J)] |
 
-**Liens intéressants partagés pendant le séminaire**:
+**Liens intéressant partagés pendant le séminaire**:
 
 - https://r-graph-gallery.com/
 - https://www.data-to-viz.com/
