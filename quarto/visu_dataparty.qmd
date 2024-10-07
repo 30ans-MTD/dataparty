@@ -2,8 +2,8 @@
 title: "Visualisation faite pendant la data party"
 ---
 
-Pour plus d'**interactivité** avec la visualisation: rendez-vous sur le **notebook observable** utilisé pendant la dataparty : [[lien observable](https://observablehq.com/d/80dba99b6034c4ce)]
+Pour plus d'**interactivité** avec la visualisation : rendez-vous sur le **notebook observable** utilisé pendant la dataparty : [[lien observable](https://observablehq.com/d/80dba99b6034c4ce)]
 
-Voici une capture d'écran centrée sur l'année 2016
+Voici une **capture d'écran** centrée sur l'année 2016 :
 
 ![](https://github.com/30ans-MTD/dataparty/raw/main/readme.files/dataparty_visu_done_during_event.png)
